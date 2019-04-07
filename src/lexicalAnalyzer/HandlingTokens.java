@@ -2,7 +2,6 @@ package lexicalAnalyzer;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
-import java.util.concurrent.ConcurrentHashMap;
 
 public class HandlingTokens {
 	private static Hashtable <String, String> key= new Hashtable<String,String>();//tokens use to identifier
@@ -14,7 +13,8 @@ public class HandlingTokens {
 	}
 	public void handerTokens() {
 		hashTable();
-		for(int i = 0; i < tokens.size() ; i ++) {
+		exitFOR: 
+			for(int i = 0; i < tokens.size() ; i ++) {
 			if(i > 0 && i<tokens.size()-1) {
 				doubleToken = tokens.get(i).getTokenName()+tokens.get(i+1).getTokenName();				
 				if(tokens.get(i-1).getTokenName().equals("'")) {
@@ -98,6 +98,11 @@ public class HandlingTokens {
 				i++;
 				continue;
 			}
+			if (doubleToken.equals("==")) {
+				result.add(new finalTokens("==", "EQnumber", tokens.get(i).getLine(), getColumns(i+1, tokens.get(i).getLine(),true)));
+				i++;
+				continue;
+			}
 			if(isNumberic(tokens.get(i).getTokenName())){
 				result.add(new finalTokens(tokens.get(i).getTokenName(),"ICONSTnumber", tokens.get(i).getLine(), getColumns(i, tokens.get(i).getLine(),false)));
 				i++;
@@ -110,6 +115,10 @@ public class HandlingTokens {
 						check=true;
 					}				
 				if(!check) {
+					if(tokens.get(i).getTokenName().equals("=")||tokens.get(i).getTokenName().equals(":")) {
+						result.add(new finalTokens(tokens.get(i).getTokenName(),"ERROR",tokens.get(i).getLine(),getColumns(i, tokens.get(i).getLine(),false)));
+						break exitFOR;
+					}
 					result.add(new finalTokens(tokens.get(i).getTokenName(), "IDnumber",tokens.get(i).getLine(),getColumns(i, tokens.get(i).getLine(),false)));
 				}
 			}
@@ -154,7 +163,6 @@ public class HandlingTokens {
 		key.put(")","RPARENnumber");
 		key.put("<","LTnumber");
 		key.put(">","GTnumber");
-		//key.put("=","EQnumber");
 		key.put("-","MINUSnumber");
 		key.put("+","PLUSnumber");
 		key.put("*","TIMESnumber");

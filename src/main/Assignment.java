@@ -13,7 +13,7 @@ public class Assignment {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method
-		String inputFile = "input/Test01.txt";
+		String inputFile = "input/Test05.txt";
 		String outputFile = "output/output.txt";
 		ArrayList<finalTokens> res = new ArrayList<finalTokens>();
 		try {

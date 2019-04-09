@@ -70,7 +70,7 @@ public class HandlingTokens {
 			if(tokens.get(i).getTokenName().equals(" ")) {
 				continue;
 			}
-			if(tokens.get(i).getTokenName().equals("abcd")) {
+			if(tokens.get(i).getTokenName().equals("    ")) {
 				continue;
 			}
 			if(doubleToken.equals(":=")) {
@@ -135,7 +135,7 @@ public class HandlingTokens {
 			return true;
 		}
 	//Get column of line
-		public static lexicalAnalyzer.getColumn getColumns(int size, int line, boolean check) {
+		public static getColumn getColumns(int size, int line, boolean check) {
 			int start=0;
 			for(int i=0; i<size;i++) {
 				if(tokens.get(i).getLine()==line) {

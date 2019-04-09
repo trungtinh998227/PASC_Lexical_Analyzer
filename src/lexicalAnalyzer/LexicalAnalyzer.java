@@ -31,7 +31,7 @@ public class LexicalAnalyzer {
 					break;
 				default:{
 					if(Character.toString((char) type).contains("\t")) {
-						tokens.add(new getTokens("abcd",st.lineno()));
+						tokens.add(new getTokens("    ",st.lineno()));
 						break;
 					}
 					tokens.add(new getTokens(Character.toString((char) type),st.lineno()));
@@ -39,7 +39,6 @@ public class LexicalAnalyzer {
 				}
 			}
 		}
-		//tokens.add(new getTokens("EOF",st.lineno()));
 		this.reader.close();
 	}
 	//Getter

@@ -1,5 +1,5 @@
 if n <= 1 then
-	fibResult := n;
+	fibResult := n
 else
 	begin
 		i := 2;
@@ -8,6 +8,6 @@ else
 				tmp := a + b;
 				i := i + 1;
 			endloop
-		fibResult := a;
+		fibResult := a
 	end
 endif

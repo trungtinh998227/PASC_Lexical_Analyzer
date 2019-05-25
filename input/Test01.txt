@@ -1,1 +1,5 @@
-var x, y;
+var x;
+begin
+	y:='bfh'
+    x := 2.1;
+end.

@@ -19,6 +19,7 @@ public class LexicalAnalyzer {
 		st.ordinaryChar('.');
 		st.ordinaryChar('*');
 		st.ordinaryChar('\t');
+		st.ordinaryChar('/');
 		//Get token from file
 		while(st.nextToken() != StreamTokenizer.TT_EOF) {
 			int type =st.ttype;
@@ -35,6 +36,7 @@ public class LexicalAnalyzer {
 						break;
 					}
 					tokens.add(new getTokens(Character.toString((char) type),st.lineno()));
+					//System.out.println(Character.toString((char) type));
 					break;
 				}
 			}

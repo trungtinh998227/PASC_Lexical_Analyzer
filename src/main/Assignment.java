@@ -13,8 +13,8 @@ public class Assignment {
 
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method
-		String inputFile = "input/Test06.txt";
-		String outputFile = "output/output.txt";
+		String inputFile = "input/Test01.txt";
+		String outputFile = "output/output01.txt";
 		ArrayList<finalTokens> res = new ArrayList<finalTokens>();
 		try {
 			LexicalAnalyzer lexicalAnalyzer = new LexicalAnalyzer(inputFile);
@@ -22,12 +22,11 @@ public class Assignment {
 			handling.handerTokens();
 			res=handling.getResult();
 			BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
-			for(int i = 0;i < res.size();i ++) {
+			for(int i = 0;i < res.size();i++) {
 				writer.write(res.get(i).toString());
 				writer.newLine();
 			}
 			writer.close();
-			
 		} catch (IOException e) {
 			System.out.println("File not found or do not exist");
 			e.printStackTrace();

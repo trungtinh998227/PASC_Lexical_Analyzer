@@ -1,13 +1,5 @@
-if n <= 1 then
-	fibResult := n
-else
-	begin
-		i := 2;
-		while i >= n 
-			loop
-				tmp := a + b;
-				i := i + 1;
-			endloop
-		fibResult := a
-	end
-endif
+var x y; /* Missing comma in declaration */
+begin
+	y := 3;
+	x := y + 56; 
+end.

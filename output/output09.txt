@@ -1,0 +1,14 @@
+var VARnumber 1 1 1 3 
+myFacParam IDnumber 1 1 5 14 
+; SEMInumber 1 1 15 15 
+var VARnumber 2 2 1 3 
+beginningX IDnumber 2 2 5 14 
+; SEMInumber 2 2 15 15 
+begin BEGINnumber 3 3 1 5 
+facParam IDnumber 4 4 5 12 
+:= COLEQnumber 4 4 13 14 
+beginningX IDnumber 4 4 16 25 
+; SEMInumber 4 4 26 26 
+{Just to have done something with a constant as well} COMMENTnumber 4 4 1 3 
+end ENDnumber 5 5 1 3 
+. DOTnumber 5 5 4 4 

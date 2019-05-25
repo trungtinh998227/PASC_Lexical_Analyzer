@@ -1,0 +1,7 @@
+var c;
+	begin
+		c:= 9.0;
+		if c == -1 then begin
+			c= c + 1;
+		end;
+	end;

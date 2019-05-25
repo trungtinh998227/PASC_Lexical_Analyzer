@@ -43,7 +43,7 @@ public class HandlingTokens {
 				continue;
 			}
 			
-			if(doubleToken.equalsIgnoreCase("(*") && i<tokens.size()) {
+			if(doubleToken.equalsIgnoreCase("/*") && i<tokens.size()) {
 				StringBuilder getCmt = new StringBuilder();
 				i+=2;
 				boolean stop = false;
@@ -52,13 +52,13 @@ public class HandlingTokens {
 					doubleToken=tokens.get(i).getTokenName()+tokens.get(i+1).getTokenName();
 					getCmt.append(tokens.get(i).getTokenName());
 					i++;
-					
+					System.out.println(getCmt);
 					if(tokens.get(i).getTokenName().equals("EOF")) {
 						System.out.println("Missing block comment");
 						stop=true;
 						break getcmt;
 					}
-				}while(!doubleToken.equals("*)") && i<tokens.size()-1);
+				}while(!doubleToken.equals("*/") && i<tokens.size()-1);
 				if(stop==false) {
 					result.add(new finalTokens(getCmt.deleteCharAt(getCmt.length()-1).toString(),"COMMENTnumber", tokens.get(i).getLine(), getColumns(startCol, tokens.get(i).getLine(),false)));
 				}

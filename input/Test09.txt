@@ -1,0 +1,5 @@
+var myFacParam;
+var beginningX;
+begin
+	facParam:= beginningX; /*{Just to have done something with a constant as well}*/
+end.

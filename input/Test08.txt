@@ -1,10 +1,5 @@
-var a, b, tmp, i, n;
-		begin
-			n := 3;
-			a := 0;
-			b := 1;
-			
-			if n <= 1 then
+var c, d, e;
+if n <= 1 then
 				fibResult := n
 			else
 			begin
@@ -20,4 +15,3 @@ var a, b, tmp, i, n;
 				
 				fibResult := a
 			end
-		end;

@@ -1,0 +1,15 @@
+var VARnumber 1 1 1 3 
+x IDnumber 1 1 5 5 
+y IDnumber 1 1 7 7 
+; SEMInumber 1 1 8 8 
+begin BEGINnumber 2 2 1 5 
+y IDnumber 3 3 5 5 
+:= COLEQnumber 3 3 7 8 
+3 ICONSTnumber 3 3 10 10 
+x IDnumber 4 4 5 5 
+:= COLEQnumber 4 4 7 8 
+y IDnumber 4 4 10 10 
++ PLUSnumber 4 4 12 12 
+56 ICONSTnumber 4 4 14 15 
+end ENDnumber 5 5 1 3 
+. DOTnumber 5 5 4 4 

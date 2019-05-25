@@ -1,3 +1,4 @@
-if n <= 1 then
-	fibResult := n;
-endif
+var y;
+begin
+	y := 3;
+end.
